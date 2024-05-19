@@ -23,3 +23,9 @@ Hoy estuve dedicandome a revisar todos los scripts de la carpeta "Obstacles". Me
 Por ultimo, cambie un poco la clase padre 'Obstacle', ahora se activa el metodo 'CO_HorizontalMovement' por si mismo, de esta forma, las clases hijas no tienen la responsabilidad de iniciar dicho metodo, evitando confusiones y errores a futuro, por no haber iniciado dicho metodo.
 
 Quede haciendo el movimiento de Onda del script 'VecticalWaveMovement', pero decidi dejarlo hasta aqui hoy, estuve unas dos horas trabajando en el proyecto. 
+
+## Dieciocho de mayo de 2024
+
+Hoy no tuve practicamente tiempo para avanzar en este proyecto, apenas le pude dedicar unos 20 minutos. 
+
+Pude resolver el mal funcionamiento del script 'VerticalWaveMovement'. Termine utilizando el metodo transform.Translate(), en vez de usar el 'transform.positon += valor'.
