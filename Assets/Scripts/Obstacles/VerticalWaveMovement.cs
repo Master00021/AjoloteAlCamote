@@ -14,10 +14,10 @@ namespace Game {
 
         private IEnumerator CO_VerticalMovement() {
             while (true) {
-                float movementY = Mathf.Sin(Time.time * _frequence) * _waveAmplitude * Time.deltaTime;
+                float movementY = Mathf.Sin(Time.time * _frequence) * _waveAmplitude;
 
-                var velocity = new Vector2(0.0f, movementY);
-                transform.position *= velocity;
+                var velocity = new Vector3(0.0f, movementY);
+                transform.Translate(Time.deltaTime * velocity, Space.World);
 
                 yield return null;
             }
