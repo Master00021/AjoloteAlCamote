@@ -66,3 +66,9 @@ Me di cuenta de que Unity utiliza la convención a la hora de darle valores a la
 
 Testeé todos los scripts que he rehecho hasta ahora en una escena de Unity, y están funcionales.
 Mañana seguiré avanzando, o eso espero. Hoy estuve 5 horas trabajando.
+
+## Veintiuno de mayo de 2024
+
+He estado rehaciendo scripts sobre toda la logica referente a los niveles.
+
+Lo mas destacable es como dividi los scripts, ahora mismo cada script se encarga solamente de un apartado del funcionalmiento del nivel. 'LevelData' contiene los datos del nivel, 'LevelDataHandler' es una clase que heredaran todos los scripts que necesiten leer o escribir datos en 'LevelData', 'LevelGoal' se encarga de terminar el nivel, 'LevelShells' se encarga de guardar en 'LevelData' las shells recolectadas por el jugador.

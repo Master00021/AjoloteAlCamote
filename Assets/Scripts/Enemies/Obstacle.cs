@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game {
 
-    internal abstract class Obstacle : MonoBehaviour, ITriggerActivator {
+    internal abstract class Obstacle : MonoBehaviour, ITriggerActivator, IDestroyable {
 
         [SerializeField] private float _horizontalSpeed = 2.0f;
 
@@ -25,5 +25,9 @@ namespace Game {
 
         protected abstract void OnActivateObject();
 
+        public void Destroy() {
+            Destroy(gameObject);
+        }
+    
     }
 }

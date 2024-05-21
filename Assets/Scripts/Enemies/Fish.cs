@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game {
 
-    internal sealed class Fish : MonoBehaviour, ITriggerActivator {
+    internal sealed class Fish : MonoBehaviour, ITriggerActivator, IDestroyable {
 
         [SerializeField] private float _horizontalSpeed;
         [SerializeField] private float _rotationIntensity;
@@ -74,6 +74,10 @@ namespace Game {
             }
 
             return angle;
+        }
+
+        public void Destroy() {
+            Destroy(gameObject);
         }
 
     }

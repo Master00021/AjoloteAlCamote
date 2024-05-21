@@ -7,10 +7,10 @@ namespace Game {
     
         public static Action OnGameStart;
         public static Action OnGameStop;
-
+        
         private void Start() {
             OnGameStart?.Invoke();
         }
-    
+
     }
 }

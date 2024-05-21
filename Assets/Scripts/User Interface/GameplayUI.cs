@@ -7,9 +7,6 @@ namespace Game {
         
         [SerializeField] private TextMeshProUGUI _currentDistance;
 
-        private void OnEnable() => LevelMovement.OnDistanceChanged += CurrentDistance;
-        private void OnDisable() => LevelMovement.OnDistanceChanged -= CurrentDistance;
-
         private void CurrentDistance(float currentDistance) {
             _currentDistance.text = currentDistance.ToString("0000") + "m";
         }

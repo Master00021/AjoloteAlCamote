@@ -20,8 +20,8 @@ namespace Game {
         
         private void OnTriggerEnter2D(Collider2D other) {
             if (other.GetComponent<Player>()) {
-                OnPlaySound?.Invoke(_collected);
                 OnShellCollected?.Invoke(_shellNumber);
+                OnPlaySound?.Invoke(_collected);
                 Destroy(gameObject);
             }
         }
