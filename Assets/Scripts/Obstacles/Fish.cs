@@ -1,103 +1,79 @@
+using System.Collections;
+using NaughtyAttributes;
 using UnityEngine;
-using System; 
 
 namespace Game {
 
     internal sealed class Fish : MonoBehaviour, ITriggerActivator {
 
-        [SerializeField] private float _speed;
-        [SerializeField] private float _timeToRandomizeValues;        
+        [SerializeField] private float _horizontalSpeed;
+        [SerializeField] private float _rotationIntensity;
+        [MinMaxSlider(15.0f, 50.0f)]
+        [SerializeField] private Vector2 _rotationAngleRange;
 
-        private bool _rotationDirection = true; // Positivo
-        private float _rotation;
-        private float _rotationFactor = 0.4f;
-        private float _maxRotationAngle = 0.3f;
+        private float _direction;
+        private float _currentZAngle;
 
-        [SerializeField] private GameObject _star;
-        [SerializeField] private bool _isStar;
-        [SerializeField] private bool _isEnemy;
-        [SerializeField] private bool _isMainMenuFish;
-        [SerializeField] private int ID;
-
-        private bool _activate = false;
-
-        private void Awake()
-        {
-            if (_isMainMenuFish) _activate = true;
+        private void Start() {
+            ActivateObject();
         }
 
-        private void Update() {
+        public void ActivateObject() {
+            StartCoroutine(CO_HorizontalMovement());
+            StartCoroutine(CO_Direction());
+            StartCoroutine(CO_Rotate());
+        }
 
-            if (_activate) {
-
-                _timeToRandomizeValues -= Time.deltaTime;
-
-                if (_timeToRandomizeValues <= 0.0f) {
-
-                    RotationRandomizer();
-
-                    _timeToRandomizeValues = 0.5f;
-                }
-
-                if (_rotationDirection) {
-                    
-                    PositiveRotation();                    
-                }
-
-                if (!_rotationDirection) {
-                    
-                    NegativeRotation();                    
-                }
-
-                ForwardMovement();
-
-                if (!_isEnemy && !_isStar)
-                {
-
-                    //_fish.GetComponent<BoxCollider2D>().enabled = false;
-                }
+        private IEnumerator CO_HorizontalMovement() {
+            while (true) {
+                transform.Translate(_horizontalSpeed * Time.deltaTime * -transform.right, Space.World);
+                yield return null;
             }
         }
 
-        private void PositiveRotation() {
+        private IEnumerator CO_Rotate() {
+            while (true) {
+                float rotationAmount = _rotationIntensity * _direction * Time.deltaTime;
+                var rotationVector = new Vector3(0.0f, 0.0f, rotationAmount);
 
-            _rotation += _rotationFactor * Time.deltaTime;
+                transform.Rotate(rotationVector);
 
-            transform.rotation = new Quaternion(transform.rotation.x, transform.rotation.y, _rotation, transform.rotation.w);
+                float zAngle = transform.eulerAngles.z;
+                _currentZAngle = NormalizeAngle(zAngle);
 
-            if (transform.rotation.z > _maxRotationAngle) _rotationDirection = false;
-
-            
+                yield return null;
+            }
         }
 
-        private void NegativeRotation() {
+        private IEnumerator CO_Direction() {
+            bool rise = Random.value > 0.5f;
+            _direction = rise ? 1.0f : -1.0f;
 
-            _rotation -= 0.4f * Time.deltaTime;
+            while (true) {
+                float randomRotationAngle = Random.Range(_rotationAngleRange.x, _rotationAngleRange.y);
 
-            if (transform.rotation.z < -_maxRotationAngle) _rotationDirection = true;
+                if (Mathf.Abs(_currentZAngle) > randomRotationAngle) {
+                    _direction = rise ? 1.0f : -1.0f;
+                    rise = !rise;
+                }
 
-            transform.rotation = new Quaternion(transform.rotation.x, transform.rotation.y, _rotation, transform.rotation.w);
+                yield return null;
+            }
         }
 
-        private void ForwardMovement() {
+        private float NormalizeAngle(float angle) {
+            float oneRevolution = 360.0f;
+            float halfRevolution = 180.0f;
 
-            transform.Translate(-transform.right * (_speed * Time.deltaTime), 0.0f);
-        }
+            if (angle >= oneRevolution) {
+                angle -= oneRevolution;
+            }
 
-        private void RotationRandomizer() {
+            if (angle > halfRevolution) {
+                angle -= oneRevolution;
+            }
 
-            _maxRotationAngle = UnityEngine.Random.Range(0.2f, 0.6f);
-
-            _rotationFactor = UnityEngine.Random.Range(0.2f, 0.6f);
-
-            _timeToRandomizeValues = UnityEngine.Random.Range(0.2f, 1.0f);
-        }
-
-        public void ActivateObject()
-        {
-
-            _activate = true;
-
+            return angle;
         }
 
     }

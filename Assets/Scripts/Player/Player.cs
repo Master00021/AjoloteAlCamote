@@ -4,7 +4,7 @@ using System;
 
 namespace Game {
 
-    [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
     internal sealed class Player : MonoBehaviour {
 
         public static Action OnPlayerDeath;

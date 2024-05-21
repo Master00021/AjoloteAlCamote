@@ -16,7 +16,6 @@ namespace Game {
         private IEnumerator CO_Rotate() {
             while (true) {
                 transform.rotation = Quaternion.Euler(0.0f, 0.0f, _rotationSpeed * Time.time);
-
                 yield return null;
             }
         }
@@ -24,7 +23,6 @@ namespace Game {
         private IEnumerator CO_Descend() {
             while (true) {
                 transform.position += _verticalSpeed * Time.deltaTime * -Vector3.up;
-
                 yield return null;
             }
         }
