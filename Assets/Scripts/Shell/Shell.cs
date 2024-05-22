@@ -9,19 +9,19 @@ namespace Game {
         Third
     }
 
-    [RequireComponent(typeof(BoxCollider2D))]
+    [RequireComponent(typeof(BoxCollider2D), typeof(AudioSource))]
     internal sealed class Shell : MonoBehaviour {
 
         public static Action<ShellNumber> OnShellCollected;
-        public static Action<AudioClip> OnPlaySound;
 
         [SerializeField] private ShellNumber _shellNumber;
+        [SerializeField] private AudioSource _audioSource;
         [SerializeField] private AudioClip _collected;
         
         private void OnTriggerEnter2D(Collider2D other) {
             if (other.GetComponent<Player>()) {
+                _audioSource.PlayOneShot(_collected);
                 OnShellCollected?.Invoke(_shellNumber);
-                OnPlaySound?.Invoke(_collected);
                 Destroy(gameObject);
             }
         }

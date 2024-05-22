@@ -7,10 +7,6 @@ namespace Game {
 
         [SerializeField] private float _horizontalSpeed = 2.0f;
 
-        private void Start() {
-            ActivateObject();
-        }
-
         public void ActivateObject() {
             StartCoroutine(CO_HorizontalMovement());
             OnActivateObject();

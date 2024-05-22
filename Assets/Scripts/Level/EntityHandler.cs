@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Game {
 
+    [RequireComponent(typeof(BoxCollider2D))]
     internal sealed class EntityHandler : MonoBehaviour {
 
         private void OnTriggerEnter2D(Collider2D other) {

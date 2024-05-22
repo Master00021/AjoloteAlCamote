@@ -12,11 +12,6 @@ namespace Game {
             if (other.TryGetComponent<ITriggerActivator>(out var trigger)) {
                 trigger.ActivateObject();
             }
-
-            if (other.GetComponent<Obstacle>()) {
-                OnPlayerDeath?.Invoke();
-                Death();
-            }
         }
 
         internal void Death() {

@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Game {
 
+    [RequireComponent(typeof(BoxCollider2D))]
     internal sealed class GenericMovement : Obstacle {
 
         [SerializeField] private float _verticalSpeed;
@@ -14,8 +15,10 @@ namespace Game {
         }
 
         private IEnumerator CO_Rotate() {
+            float time = 0.0f;
             while (true) {
-                transform.rotation = Quaternion.Euler(0.0f, 0.0f, _rotationSpeed * Time.time);
+                time += Time.deltaTime;
+                transform.rotation = Quaternion.Euler(0.0f, 0.0f, _rotationSpeed * time);
                 yield return null;
             }
         }

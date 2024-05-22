@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using System;
 
 namespace Game {
 
@@ -8,6 +7,7 @@ namespace Game {
 
         [SerializeField] private Rigidbody2D _rigidbody;
         [SerializeField] private float _gravityIntensity = 2.93f;
+        [SerializeField] private float _xSpeedIncrease;
         [SerializeField] private float _limitYSpeed;
         [SerializeField] private float _xSpeed;
 
@@ -50,6 +50,8 @@ namespace Game {
 
         private IEnumerator Co_HorizontalMovement() {
             while (true) {
+                _xSpeed += _xSpeedIncrease * Time.deltaTime;
+
                 _rigidbody.velocity = new Vector2(_xSpeed, _rigidbody.velocity.y);
 
                 yield return null;

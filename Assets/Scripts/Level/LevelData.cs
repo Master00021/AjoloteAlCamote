@@ -9,6 +9,7 @@ namespace Game {
         [SerializeField] internal bool FirstShell;
         [SerializeField] internal bool SecondShell;
         [SerializeField] internal bool ThirdShell;
+        [SerializeField] internal float Percentage;
         [SerializeField] internal int ID;
 
     }

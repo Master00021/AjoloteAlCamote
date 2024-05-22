@@ -71,4 +71,8 @@ Mañana seguiré avanzando, o eso espero. Hoy estuve 5 horas trabajando.
 
 He estado rehaciendo scripts sobre toda la logica referente a los niveles.
 
-Lo mas destacable es como dividi los scripts, ahora mismo cada script se encarga solamente de un apartado del funcionalmiento del nivel. 'LevelData' contiene los datos del nivel, 'LevelDataHandler' es una clase que heredaran todos los scripts que necesiten leer o escribir datos en 'LevelData', 'LevelGoal' se encarga de terminar el nivel, 'LevelShells' se encarga de guardar en 'LevelData' las shells recolectadas por el jugador.
+Lo mas destacable es como dividi los scripts, ahora mismo cada script se encarga solamente de un apartado del funcionalmiento del nivel. 'LevelData' contiene los datos del nivel, 'LevelDataHandler' es una clase que heredaran todos los scripts que necesiten leer o escribir datos en 'LevelData', 'LevelGoal' se encarga de terminar el nivel, 'LevelShells' se encarga de guardar en 'LevelData' las shells recolectadas por el jugador. Llevo 2 horas trabajando. 
+
+Como el codigo ya esta ordenado y rehecho casi en su totalidad, empezare a editar las escenas de Unity y a hacer que todo funcione. Se que habran cosas en el codigo que no funcionaran como yo espero, o cosas que pase por alto, pero el mismo nivel me ira diciendo que es lo que va necesitando, y yo lo ire solucionando o agregando.
+
+Llevo otras 2 horas trabajando. El primer nivel esta medianamente funcional, al menos los enemigos y los obstaculos. Falta todavia las decoraciones y probablemente deba de cambiar un poco la rotacion de los peces, tiene algunos comportamientos no deseados.
