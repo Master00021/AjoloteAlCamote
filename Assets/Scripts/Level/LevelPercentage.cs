@@ -5,14 +5,10 @@ namespace Game {
     internal sealed class LevelPercentage : LevelDataHandler {
     
         [SerializeField] private Transform _playerPos;
+        [SerializeField] private Transform _levelStart;
         [SerializeField] private Transform _levelEnd;
 
-        private Transform _levelStart;
         private float _percentage;
-
-        private void Awake() {
-            _levelStart = _playerPos;
-        }
 
         private void OnEnable() {
             LevelGoal.OnLevelComplete += CalculatePercentage;
@@ -22,6 +18,10 @@ namespace Game {
         private void OnDisable() {
             LevelGoal.OnLevelComplete -= CalculatePercentage;
             Player.OnPlayerDeath -= CalculatePercentage;
+        }
+
+        private void Update() {
+            CalculatePercentage();
         }
 
         private void CalculatePercentage() {

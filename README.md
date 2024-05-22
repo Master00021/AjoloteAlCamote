@@ -4,19 +4,19 @@ Primero que nada, este proyecto fue un trabajo para el Taller de Diseño de Nive
 
 Ahora, tomaré este proyecto para rehacerlo y pulirlo.
 
-## Quince de mayo de 2024
+## 15 de mayo de 2024
 
 Este día me enfoqué en preparar todo el proyecto para su posterior edición, lo revisé por encima para hacerme una idea de cómo lo habíamos dejado. 
 
 Me di cuenta de que lo tendré que rehacer completamente, hay muy pocas cosas salvables, algunas lógicas que había hecho hace 9 meses únicamente. Además, dentro de Unity, tendré que rehacer los niveles y el cómo estaban organizados.
 
-## Dieciseis de mayo de 2024
+## 16 de mayo de 2024
 
 Este día pude avanzar un poco en la mañana, me dediqué a ordenar todos los scripts de forma superficial, ya sea agregando el namespace Game, declarando las clases como 'internal' o 'internal sealed', y otras cosas de orden de sintaxis que utilizo actualmente para ordenar mis trabajos.
 
 Además, rehice algunas clases, mejorando la lógica y el cómo las conectaré entre sí.
 
-## Diecisiete de mayo de 2024
+## 17 de mayo de 2024
 
 Hoy estuve dedicándome a revisar todos los scripts de la carpeta "Obstacles". Me di cuenta de que la mayoría de los scripts era básicamente la misma lógica, y que había uno en concreto, el de 'Bottle', que podía replicar la lógica de todos. Por lo tanto, borré todo el resto y cambié 'Bottle' por 'GenericMovement'. 
 
@@ -24,13 +24,13 @@ Por último, cambié un poco la clase padre 'Obstacle', ahora se activa el méto
 
 Quedé haciendo el movimiento de Onda del script 'VecticalWaveMovement', pero decidí dejarlo hasta aquí hoy. Estuve unas dos horas trabajando en el proyecto. 
 
-## Dieciocho de mayo de 2024
+## 18 de mayo de 2024
 
 Hoy no tuve prácticamente tiempo para avanzar en este proyecto, apenas le pude dedicar unos 20 minutos. 
 
 Pude resolver el mal funcionamiento del script 'VerticalWaveMovement'. Termine utilizando el método transform.Translate(), en vez de usar el 'transform.positon += valor'.
 
-## Diecinueve de mayo de 2024
+## 19 de mayo de 2024
 
 Cree el script 'GameLifeCycle' para tener controlado el inicio del juego en sí, que servirá a futuro cuando tenga que manejar todos los flujos que tendrá el videojuego. 
 
@@ -50,7 +50,7 @@ Lo único que quedaría sería limitar las velocidades del rigidbody.
 
 Hoy estuve avanzando en la Tesis, así que tampoco tuve tanto tiempo hoy, habré estado apenas 1 hora.
 
-## Veinte de mayo de 2024
+## 20 de mayo de 2024
 
 Hoy empecé trabajando con el script de Fish. 
 
@@ -67,12 +67,16 @@ Me di cuenta de que Unity utiliza la convención a la hora de darle valores a la
 Testeé todos los scripts que he rehecho hasta ahora en una escena de Unity, y están funcionales.
 Mañana seguiré avanzando, o eso espero. Hoy estuve 5 horas trabajando.
 
-## Veintiuno de mayo de 2024
+## 21 de mayo de 2024
 
-He estado rehaciendo scripts sobre toda la logica referente a los niveles.
+He estado rehaciendo scripts sobre toda la lógica referente a los niveles.
 
-Lo mas destacable es como dividi los scripts, ahora mismo cada script se encarga solamente de un apartado del funcionalmiento del nivel. 'LevelData' contiene los datos del nivel, 'LevelDataHandler' es una clase que heredaran todos los scripts que necesiten leer o escribir datos en 'LevelData', 'LevelGoal' se encarga de terminar el nivel, 'LevelShells' se encarga de guardar en 'LevelData' las shells recolectadas por el jugador. Llevo 2 horas trabajando. 
+Lo más destacable es cómo dividí los scripts, ahora mismo cada script se encarga solamente de un apartado del funcionamiento del nivel. 'LevelData' contiene los datos del nivel. 'LevelDataHandler' es una clase que heredarán todos los scripts que necesiten leer o escribir datos en 'LevelData'. 'LevelGoal' se encarga de terminar el nivel. 'LevelShells' se encarga de guardar en 'LevelData' las shells recolectadas por el jugador. Llevo 2 horas trabajando. 
 
-Como el codigo ya esta ordenado y rehecho casi en su totalidad, empezare a editar las escenas de Unity y a hacer que todo funcione. Se que habran cosas en el codigo que no funcionaran como yo espero, o cosas que pase por alto, pero el mismo nivel me ira diciendo que es lo que va necesitando, y yo lo ire solucionando o agregando.
+Como el código ya está ordenado y rehecho casi en su totalidad, empezaré a editar las escenas de Unity y a hacer que todo funcione. Sé que habrá cosas en el código que no funcionarán como yo espero, o cosas que pasé por alto, pero el mismo nivel me irá diciendo que es lo que va necesitando, y yo lo iré solucionando o agregando.
 
-Llevo otras 2 horas trabajando. El primer nivel esta medianamente funcional, al menos los enemigos y los obstaculos. Falta todavia las decoraciones y probablemente deba de cambiar un poco la rotacion de los peces, tiene algunos comportamientos no deseados.
+Llevo otras 2 horas trabajando. El primer nivel está medianamente funcional, al menos los enemigos y los obstáculos. Todavía faltan las decoraciones y probablemente deba de cambiar un poco la rotación de los peces; tiene algunos comportamientos no deseados.
+
+Después de 3 horas, el nivel uno está funcional, con decoraciones y todo, ahora creo que pasaré a los flujos de UI.
+
+1 hora después, el 'VictoryUI' está funcionando, con los 'LevelData' del porcentaje completado y las Shells conseguidas.

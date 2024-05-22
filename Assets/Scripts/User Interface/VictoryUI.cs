@@ -1,18 +1,27 @@
+using TMPro;
 using UnityEngine;
 
 namespace Game {
 
     internal sealed class VictoryUI : GameUI {    
 
-        [SerializeField] private LevelData _levelData;
+        [SerializeField] private GameObject _uiToActivate;
         [SerializeField] private GameObject[] _shells;
+        [SerializeField] private TextMeshProUGUI _percentage;
+        [SerializeField] private LevelData _levelData;
 
-        private void OnEnable(){
+        protected override void OnEnable(){
+            base.OnEnable();
+
             Level.OnLevelEntry += GetCurrentLevel;
             LevelGoal.OnLevelComplete += ShellCollected;
+
+            OnDeactivateUI();
         }
 
-        private void OnDisable() {
+        protected override void OnDisable() {
+            base.OnDisable();
+
             Level.OnLevelEntry -= GetCurrentLevel;
             LevelGoal.OnLevelComplete -= ShellCollected;
         } 
@@ -35,14 +44,26 @@ namespace Game {
             }
         }
 
+        private void PercentageObtained() {
+            if (_levelData.Percentage > 99.0f) {
+                _levelData.Percentage = 100.0f;
+            }
+
+            _percentage.text = _levelData.Percentage.ToString() + "%";
+        }
+
         protected override void OnActivateUI() {
             ShellCollected();
+            PercentageObtained();
+            _uiToActivate.SetActive(true);
         }
 
         protected override void OnDeactivateUI() {
             for (int i = 0; i < _shells.Length; i++) {
                 _shells[i].SetActive(false);
             }
+
+            _uiToActivate.SetActive(false);
         }
 
     }  

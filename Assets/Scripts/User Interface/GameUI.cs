@@ -4,13 +4,12 @@ namespace Game {
 
     internal abstract class GameUI : MonoBehaviour {
 
-        private void OnEnable() {
+        protected virtual void OnEnable() {
             GameLifeCycle.OnGameStart += DeactivateUI;
             LevelGoal.OnLevelComplete += ActivateUI;
-
         }
 
-        private void OnDisable() {
+        protected virtual void OnDisable() {
             GameLifeCycle.OnGameStart -= DeactivateUI;
             LevelGoal.OnLevelComplete -= ActivateUI;
         }

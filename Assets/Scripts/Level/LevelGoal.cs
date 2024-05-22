@@ -9,8 +9,9 @@ namespace Game {
         public static Action OnLevelComplete;
 
         private void OnTriggerEnter2D(Collider2D other) {
-            if (other.GetComponent<Player>()) {
+            if (other.TryGetComponent<Player>(out var player)) {
                 Complete();
+                player.gameObject.SetActive(false);
             }
         }
 
