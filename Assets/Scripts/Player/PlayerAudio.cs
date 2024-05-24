@@ -2,7 +2,6 @@ using UnityEngine;
 
 namespace Game {
 
-    [RequireComponent(typeof(AudioSource))]
     internal sealed class PlayerAudio : MonoBehaviour {
 
         [SerializeField] private AudioSource _audioSource;

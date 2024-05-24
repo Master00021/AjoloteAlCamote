@@ -80,3 +80,7 @@ Llevo otras 2 horas trabajando. El primer nivel está medianamente funcional, al
 Después de 3 horas, el nivel uno está funcional, con decoraciones y todo, ahora creo que pasaré a los flujos de UI.
 
 1 hora después, el 'VictoryUI' está funcionando, con los 'LevelData' del porcentaje completado y las Shells conseguidas.
+
+## 24 de mayo de 2024
+
+Estuve una media hora decorando el segundo nivel durante la mañana antes de ir al instituto.
