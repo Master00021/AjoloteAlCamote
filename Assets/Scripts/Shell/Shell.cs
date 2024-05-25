@@ -9,7 +9,7 @@ namespace Game {
         Third
     }
 
-    [RequireComponent(typeof(BoxCollider2D), typeof(AudioSource))]
+    [RequireComponent(typeof(BoxCollider2D))]
     internal sealed class Shell : MonoBehaviour {
 
         public static Action<ShellNumber> OnShellCollected;
