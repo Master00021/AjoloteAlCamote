@@ -3,7 +3,7 @@ using UnityEngine;
 namespace Game {
 
     [RequireComponent(typeof(BoxCollider2D))]
-    internal sealed class Fish : MonoBehaviour, IDestroyable {
+    internal sealed class EntityToDestroy : MonoBehaviour, IDestroyable {
 
         [SerializeField] private GameObject _objectToDestroy;
     

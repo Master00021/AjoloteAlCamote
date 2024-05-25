@@ -24208,6 +24208,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 861663435747691824, guid: 7d4466603c31fcf43a0a36940cdd616b, type: 3}
+      propertyPath: _xSpeed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1505193759778132513, guid: 7d4466603c31fcf43a0a36940cdd616b, type: 3}
       propertyPath: _audioSource
       value: 

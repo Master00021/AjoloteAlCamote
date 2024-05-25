@@ -86,3 +86,7 @@ Después de 3 horas, el nivel uno está funcional, con decoraciones y todo, ahor
 Estuve una media hora decorando el segundo nivel durante la mañana antes de ir al instituto.
 
 En la tarde noche estuve avanzando una hora y media, dejando el nivel dos funcional.
+
+## 25 de mayo de 2024
+
+El nivel 3 ahora es funcional. Estuve trabajando una hora y media.
