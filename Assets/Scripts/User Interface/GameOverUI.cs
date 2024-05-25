@@ -3,18 +3,17 @@ using TMPro;
 
 namespace Game {
 
-    internal sealed class VictoryUI : GameUI {    
+    internal sealed class GameOverUI : GameUI {
 
         [SerializeField] private GameObject _uiToActivate;
-        [SerializeField] private GameObject[] _shells;
         [SerializeField] private TextMeshProUGUI _percentage;
         [SerializeField] private LevelData _levelData;
 
-        protected override void OnEnable(){
-            base.OnEnable();
+        protected override void OnEnable() {
+            base.OnDisable();
 
             Level.OnLevelEntry += GetCurrentLevel;
-            LevelGoal.OnLevelComplete += ShellCollected;
+            Player.OnPlayerDeath += OnActivateUI;
 
             OnDeactivateUI();
         }
@@ -23,25 +22,11 @@ namespace Game {
             base.OnDisable();
 
             Level.OnLevelEntry -= GetCurrentLevel;
-            LevelGoal.OnLevelComplete -= ShellCollected;
-        } 
+            Player.OnPlayerDeath -= OnActivateUI;
+        }
 
         private void GetCurrentLevel(LevelData levelData) {
             _levelData = levelData;
-        }
-
-        private void ShellCollected() {
-            if (_levelData.FirstShell) {
-                _shells[0].SetActive(true);
-            }
-
-            if (_levelData.SecondShell) {
-                _shells[1].SetActive(true);
-            }
-
-            if (_levelData.ThirdShell) {
-                _shells[2].SetActive(true);
-            }
         }
 
         private void PercentageObtained() {
@@ -53,18 +38,14 @@ namespace Game {
         }
 
         protected override void OnActivateUI() {
-            ShellCollected();
             PercentageObtained();
             _uiToActivate.SetActive(true);
         }
 
         protected override void OnDeactivateUI() {
-            for (int i = 0; i < _shells.Length; i++) {
-                _shells[i].SetActive(false);
-            }
-
             _uiToActivate.SetActive(false);
         }
 
-    }  
+    }
 }
+
