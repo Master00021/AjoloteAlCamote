@@ -1,4 +1,5 @@
 using UnityEngine.SceneManagement;
+using System.Collections;
 using UnityEngine;
 using TMPro;
 
@@ -53,8 +54,16 @@ namespace Game {
             _percentage.text = _levelData.Percentage.ToString("0") + "%";
         }
 
-        public   override void OnRestart() {
-            SceneManager.LoadScene(_levelData.LevelName, LoadSceneMode.Single);
+        public override void OnRestart() {
+            StartCoroutine(CO_RestartLevel());
+        }
+
+        private IEnumerator CO_RestartLevel() {
+            while (true) {
+                yield return new WaitForSecondsRealtime(0.1f);
+                
+                SceneManager.LoadScene(_levelData.LevelName, LoadSceneMode.Single);
+            }
         }
 
         protected override void OnActivateUI() {

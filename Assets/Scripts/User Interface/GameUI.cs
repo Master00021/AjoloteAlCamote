@@ -1,6 +1,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using System;
+using System.Collections;
 
 namespace Game {
 
@@ -20,7 +21,15 @@ namespace Game {
 
         public void OnMainMenu() {
             OnSaveData?.Invoke();
-            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+            StartCoroutine(CO_GoToMainMenu());
+        }
+
+        private IEnumerator CO_GoToMainMenu() {
+            while (true) {
+                yield return new WaitForSecondsRealtime(0.1f);
+                
+                SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+            }
         }
 
         private void ActivateUI() {

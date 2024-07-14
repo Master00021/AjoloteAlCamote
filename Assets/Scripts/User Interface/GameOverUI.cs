@@ -1,4 +1,5 @@
 using UnityEngine.SceneManagement;
+using System.Collections;
 using UnityEngine;
 using TMPro;
 
@@ -39,7 +40,15 @@ namespace Game {
         }
 
         public override void OnRestart() {
-            SceneManager.LoadScene(_levelData.LevelName, LoadSceneMode.Single);
+            StartCoroutine(CO_RestartLevel());
+        }
+
+        private IEnumerator CO_RestartLevel() {
+            while (true) {
+                yield return new WaitForSecondsRealtime(0.1f);
+                
+                SceneManager.LoadScene(_levelData.LevelName, LoadSceneMode.Single);
+            }
         }
 
         protected override void OnActivateUI() {

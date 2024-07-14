@@ -2685,6 +2685,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1426105407}
+        m_TargetAssemblyTypeName: Game.GameAudio, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 628f5e67dc1e79b4ba33102ea11433b7, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 943656185}
         m_TargetAssemblyTypeName: Game.PauseUI, Assembly-CSharp
         m_MethodName: OnResume
@@ -11577,6 +11589,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1426105407}
+        m_TargetAssemblyTypeName: Game.GameAudio, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 628f5e67dc1e79b4ba33102ea11433b7, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 943656187}
         m_TargetAssemblyTypeName: Game.VictoryUI, Assembly-CSharp
         m_MethodName: OnRestart
@@ -14325,6 +14349,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1426105407}
+        m_TargetAssemblyTypeName: Game.GameAudio, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 628f5e67dc1e79b4ba33102ea11433b7, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 943656185}
         m_TargetAssemblyTypeName: Game.PauseUI, Assembly-CSharp
         m_MethodName: OnMainMenu
@@ -14874,6 +14910,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1426105407}
+        m_TargetAssemblyTypeName: Game.GameAudio, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 628f5e67dc1e79b4ba33102ea11433b7, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 943656187}
         m_TargetAssemblyTypeName: Game.GameUI, Assembly-CSharp
         m_MethodName: OnMainMenu
@@ -16332,7 +16380,7 @@ Transform:
   m_GameObject: {fileID: 1251899045}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 0, z: -10}
+  m_LocalPosition: {x: -0.6999998, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18730,6 +18778,17 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 2038912139021027085, guid: 0fe0140e5c1482f4f97c3c014e470065, type: 3}
   m_PrefabInstance: {fileID: 5364276392958507327}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1426105407 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6173503404337524034, guid: 0fe0140e5c1482f4f97c3c014e470065, type: 3}
+  m_PrefabInstance: {fileID: 5364276392958507327}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f4bdf261b70a649add9fdffa533f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1440116995
 GameObject:
   m_ObjectHideFlags: 0
@@ -19043,6 +19102,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1426105407}
+        m_TargetAssemblyTypeName: Game.GameAudio, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 628f5e67dc1e79b4ba33102ea11433b7, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 943656185}
         m_TargetAssemblyTypeName: Game.PauseUI, Assembly-CSharp
         m_MethodName: OnRestart
@@ -23139,6 +23210,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1426105407}
+        m_TargetAssemblyTypeName: Game.GameAudio, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 628f5e67dc1e79b4ba33102ea11433b7, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 943656186}
         m_TargetAssemblyTypeName: Game.GameOverUI, Assembly-CSharp
         m_MethodName: OnRestart
@@ -23899,7 +23982,7 @@ Transform:
   m_GameObject: {fileID: 1845910448}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 0, z: -10}
+  m_LocalPosition: {x: -0.13926315, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26571,6 +26654,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1426105407}
+        m_TargetAssemblyTypeName: Game.GameAudio, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 628f5e67dc1e79b4ba33102ea11433b7, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 943656186}
         m_TargetAssemblyTypeName: Game.GameUI, Assembly-CSharp
         m_MethodName: OnMainMenu
@@ -27634,7 +27729,7 @@ PrefabInstance:
       objectReference: {fileID: 1426105406}
     - target: {fileID: 5709968539060681167, guid: 7d4466603c31fcf43a0a36940cdd616b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -8.7
       objectReference: {fileID: 0}
     - target: {fileID: 5709968539060681167, guid: 7d4466603c31fcf43a0a36940cdd616b, type: 3}
       propertyPath: m_LocalPosition.y

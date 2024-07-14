@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6673632100236971346}
   - component: {fileID: 2038912139021027085}
+  - component: {fileID: 6173503404337524034}
   m_Layer: 0
-  m_Name: GameAudio
+  m_Name: AudioSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,6 +129,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6173503404337524034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882433412260772367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f4bdf261b70a649add9fdffa533f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 2038912139021027085}
 --- !u!1 &5488929328095537946
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +154,7 @@ GameObject:
   - component: {fileID: 3062733431079268069}
   - component: {fileID: 2579576019662428294}
   m_Layer: 0
-  m_Name: SaveSystem
+  m_Name: DataSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

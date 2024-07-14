@@ -24,7 +24,6 @@ namespace Game {
         }
 
         private void GamePaused(bool paused) {
-            print(paused);
             if (paused) {
                 Time.timeScale = 0.0f;
             }
