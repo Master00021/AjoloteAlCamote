@@ -244,7 +244,7 @@ MonoBehaviour:
   _gravityIntensity: 6
   _xSpeedIncrease: 0.1
   _limitYSpeed: 10
-  _xSpeed: 6
+  _xSpeed: 10
 --- !u!114 &1505193759778132513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,7 +258,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 0}
-  _playerDeath: {fileID: 8300000, guid: ae30af17fd066f14fae59cdbd6612e9c, type: 3}
+  _playerDeath: {fileID: 8300000, guid: 4054b595cd22ad946a6ca0d01a367b6d, type: 3}
+  _playerWin: {fileID: 8300000, guid: f2f89f335415b6549aa9617e354f0756, type: 3}
 --- !u!1 &7353526899326273595
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +288,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -25, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5709968539060681167}
@@ -335,7 +336,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 100, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &5957182918632233946
 MonoBehaviour:

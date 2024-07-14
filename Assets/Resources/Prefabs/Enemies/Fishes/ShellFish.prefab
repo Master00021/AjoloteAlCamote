@@ -93,7 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shellNumber: 0
   _audioSource: {fileID: 1887074898291942995}
-  _collected: {fileID: 8300000, guid: f3050197656a54543b87a86354522061, type: 3}
+  _collected: {fileID: 8300000, guid: ca8296edfe904224d9e799cb438d617e, type: 3}
 --- !u!1 &3941208845635542788
 GameObject:
   m_ObjectHideFlags: 0
