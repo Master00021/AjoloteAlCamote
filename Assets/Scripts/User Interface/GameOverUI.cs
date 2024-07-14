@@ -1,3 +1,4 @@
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
 
@@ -37,6 +38,10 @@ namespace Game {
             _percentage.text = _levelData.Percentage.ToString("0") + "%";
         }
 
+        public override void OnRestart() {
+            SceneManager.LoadScene(_levelData.LevelName, LoadSceneMode.Single);
+        }
+
         protected override void OnActivateUI() {
             PercentageObtained();
             _uiToActivate.SetActive(true);
@@ -48,4 +53,3 @@ namespace Game {
 
     }
 }
-

@@ -1,3 +1,4 @@
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 namespace Game {
@@ -14,6 +15,10 @@ namespace Game {
             LevelGoal.OnLevelComplete -= ActivateUI;
         }
 
+        public void OnMainMenu() {
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        }
+
         private void ActivateUI() {
             OnActivateUI();
         }
@@ -22,6 +27,7 @@ namespace Game {
             OnDeactivateUI();
         }
 
+        public abstract void OnRestart();
         protected abstract void OnActivateUI();
         protected abstract void OnDeactivateUI();
 

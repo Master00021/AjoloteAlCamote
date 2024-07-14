@@ -1,3 +1,4 @@
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 namespace Game {
@@ -27,6 +28,10 @@ namespace Game {
         public void ShowMainMenu() {
             _mainMenu.SetActive(true);
             _levelsMenu.SetActive(false);
+        }
+
+        public void GoToLevel(string levelName) {
+            SceneManager.LoadScene(levelName, LoadSceneMode.Single);
         }
     
     }

@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Game {
 
+    // Crab does not move, so it does not inherits from 'DecorationAnimal'
     internal sealed class Crab : MonoBehaviour {
     
         [SerializeField] private Animator _animator;

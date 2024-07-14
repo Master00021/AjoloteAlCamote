@@ -41,11 +41,10 @@ namespace Game {
         }
 
         public void OnResume() {
-            OnGamePaused?.Invoke(_paused);
-            OnDeactivateUI();
+            Pause();
         }
 
-        public void OnRestart() {
+        public override void OnRestart() {
             SceneManager.LoadScene(_levelData.LevelName, LoadSceneMode.Single);
         }
 
