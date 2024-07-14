@@ -1,9 +1,12 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using System;
 
 namespace Game {
 
     internal abstract class GameUI : MonoBehaviour {
+
+        public static Action OnSaveData;
 
         protected virtual void OnEnable() {
             GameLifeCycle.OnGameStart += DeactivateUI;
@@ -16,6 +19,7 @@ namespace Game {
         }
 
         public void OnMainMenu() {
+            OnSaveData?.Invoke();
             SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
         }
 

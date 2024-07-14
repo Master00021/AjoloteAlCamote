@@ -1,9 +1,12 @@
 using UnityEngine;
+using System;
 using TMPro;
 
 namespace Game {
 
     internal sealed class LevelMenuUI : MonoBehaviour {
+
+        public static Action OnLoadData;
         
         [SerializeField] private LevelData _levelData;
         [SerializeField] private TextMeshProUGUI _percentage;
@@ -11,6 +14,8 @@ namespace Game {
         [SerializeField] private GameObject[] _shells;
 
         private void OnEnable() {
+            OnLoadData?.Invoke();
+            
             PercentageObtained();
             ShellCollected();
             Completed();

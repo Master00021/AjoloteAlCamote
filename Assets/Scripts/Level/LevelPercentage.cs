@@ -3,7 +3,7 @@ using UnityEngine;
 namespace Game {
 
     internal sealed class LevelPercentage : LevelDataContainer {
-    
+
         [SerializeField] private Transform _playerPos;
         [SerializeField] private Transform _levelStart;
         [SerializeField] private Transform _levelEnd;

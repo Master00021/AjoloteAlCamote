@@ -4,6 +4,7 @@ using UnityEngine;
 namespace Game {
 
     internal sealed class MainMenuUI : MonoBehaviour {
+
     
         [SerializeField] private GameObject _mainMenu;
         [SerializeField] private GameObject _tutorialImage;

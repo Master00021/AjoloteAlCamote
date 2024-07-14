@@ -2577,7 +2577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0ca7e3ea9296a43a2bc801ea6c8c24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelData: {fileID: 11400000, guid: 7222b204eb999624a8c7b3bc4dc83244, type: 2}
+  _levelData: {fileID: 11400000, guid: 359e32406497cac4eb59a1322640a2d5, type: 2}
   _percentage: {fileID: 891750427}
   _completed: {fileID: 734202161}
   _shells:
@@ -2946,7 +2946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0ca7e3ea9296a43a2bc801ea6c8c24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelData: {fileID: 11400000, guid: 7d84b9f5bac918f4981865bd97645ac6, type: 2}
+  _levelData: {fileID: 11400000, guid: 0a3c55f92ef6c7b4182e9b1ad5252006, type: 2}
   _percentage: {fileID: 2122948532}
   _completed: {fileID: 533749385}
   _shells:
@@ -3245,7 +3245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0ca7e3ea9296a43a2bc801ea6c8c24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelData: {fileID: 11400000, guid: 2fbbd4976d8e45a4789fbd8952019e44, type: 2}
+  _levelData: {fileID: 11400000, guid: dd9162f74dbdf8745a1a5f370a45aa2a, type: 2}
   _percentage: {fileID: 1836286422}
   _completed: {fileID: 11521836}
   _shells:
@@ -3876,7 +3876,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1753494594
 RectTransform:
   m_ObjectHideFlags: 0

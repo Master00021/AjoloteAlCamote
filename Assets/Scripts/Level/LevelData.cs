@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 
 namespace Game {
 
-    [CreateAssetMenu]
+    [Serializable]
+    [CreateAssetMenu(fileName = "LevelData", menuName = "ScriptableObjects/LevelData")]
     internal sealed class LevelData : ScriptableObject {
         
         [SerializeField] internal string LevelName;
