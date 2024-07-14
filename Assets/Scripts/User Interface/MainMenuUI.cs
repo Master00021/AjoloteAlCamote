@@ -1,4 +1,5 @@
 using UnityEngine.SceneManagement;
+using System.Collections;
 using UnityEngine;
 
 namespace Game {
@@ -31,8 +32,16 @@ namespace Game {
             _levelsMenu.SetActive(false);
         }
 
-        public void GoToLevel(string levelName) {
-            SceneManager.LoadScene(levelName, LoadSceneMode.Single);
+        public void StartGoToLevel(string levelName) {
+            StartCoroutine(CO_GoToLevel(levelName));
+        }
+
+        private IEnumerator CO_GoToLevel(string levelName) {
+            while (true) {
+                yield return new WaitForSeconds(0.1f);
+                
+                SceneManager.LoadScene(levelName, LoadSceneMode.Single);
+            }
         }
     
     }

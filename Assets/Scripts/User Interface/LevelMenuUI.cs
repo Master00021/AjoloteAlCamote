@@ -30,6 +30,8 @@ namespace Game {
         }
 
         private void ShellCollected() {
+            if (!_levelData.Completed) return;
+            
             if (_levelData.FirstShell) {
                 _shells[0].SetActive(true);
             }
@@ -47,8 +49,6 @@ namespace Game {
             if (_levelData.Completed) {
                 _percentage.gameObject.SetActive(false);
                 _completed.gameObject.SetActive(true);
-
-
             }
         }
 

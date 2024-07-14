@@ -1,24 +1,12 @@
 using UnityEngine;
 using System.IO;
-using UnityEditor;
 
 namespace Game {
 
     internal sealed class DataSystem : MonoBehaviour {
        
           private static string GetPath(string fileName) {
-               string folderName = "SaveData";
-
-               string folderPath = "Assets/" + folderName;
-
-               if (!AssetDatabase.IsValidFolder(folderPath)) {
-                    AssetDatabase.CreateFolder("Assets", folderName);
-                    Debug.Log($"Carpeta {folderName} creada en Assets/");
-               }
-
-
-               string fullPath = folderPath + "/" + fileName + ".json";
-               return fullPath;
+               return Path.Combine(Application.persistentDataPath, fileName + ".json");
           }
 
           public static void SaveLevelData(LevelData levelData) {
