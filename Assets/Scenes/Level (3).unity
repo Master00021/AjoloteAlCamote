@@ -1776,6 +1776,26 @@ PrefabInstance:
       propertyPath: _levelData
       value: 
       objectReference: {fileID: 11400000, guid: 2fbbd4976d8e45a4789fbd8952019e44, type: 2}
+    - target: {fileID: 2116662640929701845, guid: 60a19aee6864acc48857af1bfab15226, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469133318000901040, guid: 60a19aee6864acc48857af1bfab15226, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820393414408580969, guid: 60a19aee6864acc48857af1bfab15226, type: 3}
+      propertyPath: _levelData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2fbbd4976d8e45a4789fbd8952019e44, type: 2}
+    - target: {fileID: 4476566877577348818, guid: 60a19aee6864acc48857af1bfab15226, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723669499826047962, guid: 60a19aee6864acc48857af1bfab15226, type: 3}
+      propertyPath: _levelData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2fbbd4976d8e45a4789fbd8952019e44, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15429,7 +15449,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1561418924}
   - component: {fileID: 1561418923}
-  - component: {fileID: 1561418922}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -15437,18 +15456,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1561418922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1561418921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!108 &1561418923
 Light:
   m_ObjectHideFlags: 0
@@ -16151,6 +16158,10 @@ PrefabInstance:
       propertyPath: _xSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1505193759778132513, guid: 7d4466603c31fcf43a0a36940cdd616b, type: 3}
+      propertyPath: _playerWin
+      value: 
+      objectReference: {fileID: 8300000, guid: de7dde5b74518924599daec39653c8d6, type: 3}
     - target: {fileID: 1505193759778132513, guid: 7d4466603c31fcf43a0a36940cdd616b, type: 3}
       propertyPath: _audioSource
       value: 
