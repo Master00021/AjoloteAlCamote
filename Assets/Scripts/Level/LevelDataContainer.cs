@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Game {
 
-    internal class LevelDataHandler : MonoBehaviour {
+    internal class LevelDataContainer : MonoBehaviour {
 
         [SerializeField] protected LevelData _LevelData;
 

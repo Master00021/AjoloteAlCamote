@@ -2,7 +2,7 @@ using System;
 
 namespace Game {
 
-    internal sealed class Level : LevelDataHandler {
+    internal sealed class Level : LevelDataContainer {
 
         public static Action<LevelData> OnLevelEntry;
 

@@ -1,7 +1,7 @@
 
 namespace Game {
 
-    internal sealed class LevelShells : LevelDataHandler {
+    internal sealed class LevelShells : LevelDataContainer {
 
         private void OnEnable() {
             Shell.OnShellCollected += ShellCollected;

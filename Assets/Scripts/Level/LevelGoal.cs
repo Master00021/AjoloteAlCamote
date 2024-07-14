@@ -4,7 +4,7 @@ using System;
 namespace Game {
 
     [RequireComponent(typeof(BoxCollider2D))]
-    internal sealed class LevelGoal : LevelDataHandler {
+    internal sealed class LevelGoal : LevelDataContainer {
 
         public static Action OnLevelComplete;
 
