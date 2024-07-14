@@ -10,6 +10,7 @@ namespace Game {
         [SerializeField] private GameObject _mainMenu;
         [SerializeField] private GameObject _tutorialImage;
         [SerializeField] private GameObject _levelsMenu;
+        [SerializeField] private GameObject _credits;
 
         private void Awake() {
             _mainMenu.SetActive(true);
@@ -30,6 +31,12 @@ namespace Game {
         public void ShowMainMenu() {
             _mainMenu.SetActive(true);
             _levelsMenu.SetActive(false);
+            _credits.SetActive(false);
+        }
+
+        public void ShowCredits() {
+            _credits.SetActive(true);
+            _mainMenu.SetActive(false);
         }
 
         public void StartGoToLevel(string levelName) {
