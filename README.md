@@ -107,6 +107,6 @@ Entre medio de todo eso, tuve que arreglar muchos problemas pequeños en la impl
 
 Finalmente, cree un apartado de créditos, para poner no solo al grupo con el que hice este proyecto, sino también para poner a aquellos que hicieron los sonidos y canciones que utilicé en el juego. 
 
-Utilice Clockify (https://clockify.me/) para medir cuánto tiempo estuve trabajando ayer:
+Utilice Clockify (https://clockify.me/) para medir cuánto tiempo estuve trabajando ayer: (poco más de seis horas)
 
 ![alt text](image.png)
