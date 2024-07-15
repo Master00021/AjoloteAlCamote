@@ -92,3 +92,22 @@ En la tarde noche estuve avanzando una hora y media, dejando el nivel dos funcio
 El nivel 3 ahora es funcional. Estuve trabajando una hora y media.
 
 Deje un flujo de UI temporal del 'MainMenu' funcional, mas que nada para el diseño de las interfaces, que todo quedara como era en el proyecto del año pasado. Aun faltan varias cosas por hacer. Hoy trabaje unas 2 horas y media.
+
+## 15 de julio de 2024
+
+Ayer decidí volver a este proyecto y terminarlo de una vez por todas. El semestre fue complicado, pero pude gastar todo el día de ayer en finiquitar este proyecto.
+
+Lo primero que empecé a hacer, fue la lógica de UI para la selección de niveles, lo cual no fue complicado y tomó poco tiempo. 
+
+Luego me di cuenta de la necesidad de un sistema de guardado, el cual es bastante simple. Se compone de dos scripts principales: el primero es el 'DataSystem', el cual se encarga de obtener la ruta donde se guardarán o cargarán los datos. En el método 'SaveLevelData' toma el ScriptableObject y lo transforma a un archivo .json, y luego toma la ruta de los datos del nivel y escribe dichos datos en el archivo .json correspondiente.
+
+También tuve que buscar todos los sonidos y canciones del juego de nuevo, debido a que no sabía las licencias de uso que tenían, las que usamos para la evaluación en taller. Me aseguré de que todas las canciones o sonidos tuvieran la licencia Creative Commons Zero (CC0) u otra que permitiera su uso gratuito.
+
+Entre medio de todo eso, tuve que arreglar muchos problemas pequeños en la implementación y en el código, lo que consumió bastante tiempo. 
+
+Finalmente, cree un apartado de créditos, para poner no solo al grupo con el que hice este proyecto, sino también para poner a aquellos que hicieron los sonidos y canciones que utilicé en el juego. 
+
+Utilice Clockify (https://clockify.me/) para medir cuánto tiempo estuve trabajando ayer:
+
+![alt text](image.png)
+
