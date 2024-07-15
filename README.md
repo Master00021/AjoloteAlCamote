@@ -1,6 +1,6 @@
 # Devlog Ajolote al Camote
 
-Primero que nada, este proyecto fue un trabajo para el Taller de Diseño de Niveles II, a mediados del 2023. El equipo estuvo conformado por Ray, Camila, Simón y yo. Lo diseñamos entre todos, y yo estuve a cargo del área de la programación. 
+Primero que nada, este proyecto fue un trabajo para el Taller de Diseño de Niveles II, a mediados del 2023. El equipo estuvo conformado por RayRay (https://ray-conceptartist.itch.io/), ... y Julián Abaroa (https://master00021.itch.io/). Lo diseñamos entre todos, y yo estuve a cargo del área de la programación. 
 
 Ahora, tomaré este proyecto para rehacerlo y pulirlo.
 
